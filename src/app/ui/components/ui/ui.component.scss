@@ -1,0 +1,17 @@
+header {
+  height: 65px;
+  background: var(--app-dark);
+  color: var(--app-light);
+  padding: 15px;
+  display: inline-flex;
+  justify-content: space-between;
+  margin-left: 0;
+  margin-right: 0;
+  align-items: center;
+}
+
+main {
+  background: var(--app-darklight);
+  min-height: calc(100vh - 65px);
+  padding-top: 65px;
+}

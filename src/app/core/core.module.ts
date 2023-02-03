@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
+import { UiModule } from '../ui/ui.module';
 
 
 
@@ -12,7 +13,8 @@ import { HeaderComponent } from './components/header/header.component';
     CommonModule
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    UiModule
   ]
 })
 export class CoreModule { }
