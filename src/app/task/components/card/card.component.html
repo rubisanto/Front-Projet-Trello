@@ -1,9 +1,9 @@
 <div class="card mb-3" style="max-width: 100vw">
   <div class="card-header">{{ title }}</div>
   <div class="card-body">
-    <select>
+    <select (change)="changeState(item, $event)">
       <option
-        [selected]='state === category'
+        [selected]="state === category"
         *ngFor="let state of categories"
         [value]="state"
       >
