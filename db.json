@@ -1,3 +1,15 @@
 {
+  "tasks": [
+    {
+      "id": 1,
+      "title": "task1",
+      "category": "TODO"
 
+    },
+    {
+      "id": 2,
+      "title": "task2",
+      "category": "IN_PROGRESS"
+    }
+  ]
 }
