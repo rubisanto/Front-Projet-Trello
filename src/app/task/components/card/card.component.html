@@ -1,1 +1,19 @@
-<p>card works!</p>
+<div class="card mb-3" style="max-width: 100vw">
+  <div class="card-header">{{ title }}</div>
+  <div class="card-body">
+    <select>
+      <option
+        *ngFor="let category of categories"
+        [value]="category"
+      >
+        {{ category }}
+      </option>
+    </select>
+  </div>
+  <div class="card-footer">
+    <!--
+    <button (click)="goToEdit(id)" ngClass="btn btn-primary">Edit</button>
+    <button (click)="delete(id)" ngClass="btn btn-danger">Delete</button>
+    -->
+  </div>
+</div>

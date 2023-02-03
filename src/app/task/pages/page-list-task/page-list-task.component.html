@@ -1,3 +1,4 @@
+<!--
 <table>
   <tr *ngFor="let item of collection">
     <td>{{ item.title }}</td>
@@ -7,6 +8,10 @@
     </select>
   </tr>
 </table>
+-->
 
 <!-- mettre des composants * 4  ou cards -->
 <!-- mettre à chacun un tableau filtré -->
+<div *ngFor="let item of toDos">
+  <app-card [title]="item.title" [category]="item.category"></app-card>
+</div>
