@@ -3,10 +3,11 @@
   <div class="card-body">
     <select>
       <option
-        *ngFor="let category of categories"
-        [value]="category"
+        [selected]='state === category'
+        *ngFor="let state of categories"
+        [value]="state"
       >
-        {{ category }}
+        {{ state }}
       </option>
     </select>
   </div>

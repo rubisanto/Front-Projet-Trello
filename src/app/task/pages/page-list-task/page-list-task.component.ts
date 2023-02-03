@@ -36,4 +36,16 @@ export class PageListTaskComponent implements OnInit {
   // });
 
   ngOnInit(): void {}
+
+  public changeState(item: Task, event: Event) {
+    console.log(event, 'event');
+    // const target = event.target as HTMLSelectElement;
+    // console.log(target);
+    // const state = target.value as StateClient; // confirmed ou option, cancelled
+    // console.log(state);
+
+    // this.clientService.changeState(item, state).subscribe((data) => {
+    //   Object.assign(item, data);
+    // });
+  }
 }

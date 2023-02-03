@@ -9,9 +9,10 @@ import { StateTask } from 'src/app/core/enums/state-task';
 export class CardComponent implements OnInit {
   @Input() title!: string;
   @Input() category!: StateTask;
-  @Input() categories!: StateTask[];
-//  @Input() item!: Task;
+  public categories = Object.values(StateTask);
+
   constructor() {}
 
   ngOnInit(): void {}
+
 }
