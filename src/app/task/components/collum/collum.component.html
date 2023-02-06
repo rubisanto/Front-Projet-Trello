@@ -1,0 +1,13 @@
+<h1>{{colTitle}}</h1>
+<div *ngIf="col.length !== 0">
+<div *ngFor="let item of col" >
+  <app-card
+    [title]="item.title"
+    [item]="item"
+    [category]="item.category"
+  ></app-card>
+</div>
+</div>
+<div *ngIf="col.length === 0">
+  <p>{{emptyText}}</p>
+</div>
