@@ -1,9 +1,9 @@
 {
   "tasks": [
     {
+      "category": "TODO",
       "id": 1,
-      "title": "task1",
-      "category": "TODO"
+      "title": "task1"
     },
     {
       "id": 2,
