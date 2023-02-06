@@ -1,34 +1,34 @@
 {
   "tasks": [
     {
+      "category": "DONE",
       "id": 1,
-      "title": "task1",
-      "category": "TODO"
+      "title": "task1"
     },
     {
+      "category": "BLOCKED",
       "id": 2,
-      "title": "task2",
-      "category": "IN_PROGRESS"
+      "title": "task2"
     },
     {
+      "category": "BLOCKED",
       "id": 3,
-      "title": "task3",
-      "category": "DONE"
+      "title": "task3"
     },
     {
+      "category": "TODO",
       "id": 4,
-      "title": "task4",
-      "category": "BLOCKED"
+      "title": "task4"
     },
     {
+      "category": "IN_PROGRESS",
       "id": 5,
-      "title": "task5",
-      "category": "TODO"
+      "title": "task5"
     },
     {
+      "category": "DONE",
       "id": 6,
-      "title": "task6",
-      "category": "IN_PROGRESS"
+      "title": "task6"
     },
     {
       "id": 7,

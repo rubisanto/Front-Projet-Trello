@@ -5,7 +5,6 @@ import { Task } from 'src/app/core/models/task';
 import { environment } from 'src/environments/environment';
 import { TaskService } from '../../services/task.service';
 
-
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -34,9 +33,8 @@ export class CardComponent implements OnInit {
     // const state = target.value as StateClient; // confirmed ou option, cancelled
     // console.log(state);
 
-    // const obj = this.http.get<Task>(`${this.url}/tasks/${id}`);
-    // this.taskService.changeState(obj, state).subscribe((data) => {
-    //   Object.assign(item, data);
-    // });
+    this.taskService.changeState(item, state).subscribe((data) => {
+      Object.assign(item, data);
+    });
   }
 }
