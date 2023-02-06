@@ -50,6 +50,10 @@ export class TaskService {
       })
     );
   }
+
+  public add(obj: Task): Observable<Task> {
+    return this.http.post<Task>(`${this.url}/tasks`, obj)
+  }
   // possibilités de faire des méthodes pour récupérer les données
   // public getItemTodo(): Observable<Task[]> {
   //   return this.http.get<Task[]>(`${this.url}/tasks?category=TODO`);

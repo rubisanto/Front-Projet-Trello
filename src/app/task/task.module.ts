@@ -7,6 +7,7 @@ import { CardComponent } from './components/card/card.component';
 import { PageListTaskComponent } from './pages/page-list-task/page-list-task.component';
 import { PageAddTaskComponent } from './pages/page-add-task/page-add-task.component';
 import { PageEditTaskComponent } from './pages/page-edit-task/page-edit-task.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PageEditTaskComponent } from './pages/page-edit-task/page-edit-task.com
   ],
   imports: [
     CommonModule,
-    TaskRoutingModule
+    TaskRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class TaskModule { }
