@@ -16,16 +16,6 @@
       "title": "task3"
     },
     {
-      "category": "TODO",
-      "id": 4,
-      "title": "task4"
-    },
-    {
-      "category": "IN_PROGRESS",
-      "id": 5,
-      "title": "task5"
-    },
-    {
       "category": "DONE",
       "id": 6,
       "title": "task6"
@@ -41,9 +31,9 @@
       "category": "BLOCKED"
     },
     {
-      "title": "test1",
-      "category": "TODO",
-      "id": 9
+      "title": "test2",
+      "category": "BLOCKED",
+      "id": 10
     }
   ]
 }

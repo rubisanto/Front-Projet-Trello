@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { StateTask } from 'src/app/core/enums/state-task';
 import { Task } from 'src/app/core/models/task';
 import { environment } from 'src/environments/environment';
@@ -16,7 +17,11 @@ export class CardComponent implements OnInit {
   @Input() item!: Task;
   public categories = Object.values(StateTask);
   private url = environment.urlApi;
-  constructor(private http: HttpClient, private taskService: TaskService) {}
+  constructor(
+    private http: HttpClient,
+    private taskService: TaskService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     console.log(this.item);
@@ -36,5 +41,12 @@ export class CardComponent implements OnInit {
     this.taskService.changeState(item, state).subscribe((data) => {
       Object.assign(item, data);
     });
+  }
+  public goToEdit(item: Task) {
+    this.router.navigate(['edit', item.id]);
+  }
+
+  public delete(id: number) {
+    this.taskService.delete(id).subscribe();
   }
 }

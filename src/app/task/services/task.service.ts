@@ -52,22 +52,15 @@ export class TaskService {
   }
 
   public add(obj: Task): Observable<Task> {
-    return this.http.post<Task>(`${this.url}/tasks`, obj)
+    return this.http.post<Task>(`${this.url}/tasks`, obj);
   }
-  // possibilités de faire des méthodes pour récupérer les données
-  // public getItemTodo(): Observable<Task[]> {
-  //   return this.http.get<Task[]>(`${this.url}/tasks?category=TODO`);
-  // }
+  public delete(id: number): Observable<Task> {
+    return this.http
+      .delete<Task>(`${this.url}/tasks/${id}`)
+      .pipe(tap(() => this.refreshCollection()));
+  }
 
-  // public getItemInProgress(): Observable<Task[]> {
-  //   return this.http.get<Task[]>(`${this.url}/tasks?category=IN_PROGRESS`);
-  // }
-
-  // public getItemDone(): Observable<Task[]> {
-  //   return this.http.get<Task[]>(`${this.url}/tasks?category=DONE`);
-  // }
-
-  // public getItemBlocked(): Observable<Task[]> {
-  //   return this.http.get<Task[]>(`${this.url}/tasks?category=BLOCKED`);
-  // }
+  public getItemById(id: number): Observable<Task> {
+    return this.http.get<Task>(`${this.url}/tasks/${id}`);
+  }
 }
