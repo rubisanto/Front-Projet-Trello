@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { UiModule } from '../ui/ui.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -10,11 +11,12 @@ import { UiModule } from '../ui/ui.module';
     HeaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   exports: [
     HeaderComponent,
-    UiModule
+    UiModule,
   ]
 })
 export class CoreModule { }

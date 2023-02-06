@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { Task } from 'src/app/core/models/task';
 
 import { HttpClient } from '@angular/common/http';
@@ -10,21 +10,26 @@ import { StateTask } from 'src/app/core/enums/state-task';
   providedIn: 'root',
 })
 export class TaskService {
-  private collection$: BehaviorSubject<Task[]> = new BehaviorSubject<Task[]>([])
+  private collection$: BehaviorSubject<Task[]> = new BehaviorSubject<Task[]>(
+    []
+  );
+
   private url = environment.urlApi;
 
   constructor(private http: HttpClient) {
     // console.log(this.url);
 
-    this.refreshCollection();
-    // console.log(this.collection$);
+    this.refreshCollection(); // console.log(this.collection$);
   }
 
   public refreshCollection() {
-    this.http.get
+    this.http.get<Task[]>(`${this.url}/tasks`).subscribe((data) => {
+      this.collection$.next(data);
+    });
   }
 
   public get collection(): Observable<Task[]> {
+    this.refreshCollection();
     return this.collection$;
   }
 
@@ -37,8 +42,17 @@ export class TaskService {
     return this.update(obj);
   }
 
-  public update(obj: Task): Observable<Task>{
-    return this.http.put<Task>(`${this.url}/tasks/${obj.id}`, obj)
+  public update(obj: Task): Observable<Task> {
+    // créer nouvel objet
+    return this.http.put<Task>(`${this.url}/tasks/${obj.id}`, obj).pipe(
+      tap(() => {
+        this.refreshCollection();
+      })
+    );
+  }
+
+  public add(obj: Task): Observable<Task> {
+    return this.http.post<Task>(`${this.url}/tasks`, obj)
   }
   // possibilités de faire des méthodes pour récupérer les données
   // public getItemTodo(): Observable<Task[]> {

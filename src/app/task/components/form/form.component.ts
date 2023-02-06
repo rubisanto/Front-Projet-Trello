@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { StateTask } from 'src/app/core/enums/state-task';
+import { Task } from 'src/app/core/models/task';
 
 @Component({
   selector: 'app-form',
@@ -6,10 +9,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
+  public categories = Object.values(StateTask);
+  public taskForm!: FormGroup;
+  @Input() obj!: Task;
+  // Output pour sortir les données et les donner à un parent
+  @ Output() submited: EventEmitter<Task> = new EventEmitter();
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-  }
+    this.taskForm = this.fb.group({
+      title: [this.obj.title],
+      category: [this.obj.category],
+      id: [this.obj.id]
+  });
 
+  }
+  public onSubmit(){
+    this.submited.emit(this.taskForm.value);
+  }
 }
+

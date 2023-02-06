@@ -5,7 +5,6 @@ import { Task } from 'src/app/core/models/task';
 import { environment } from 'src/environments/environment';
 import { TaskService } from '../../services/task.service';
 
-
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
