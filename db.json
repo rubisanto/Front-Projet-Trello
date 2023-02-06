@@ -1,44 +1,29 @@
 {
   "tasks": [
     {
+      "title": "progress1",
+      "category": "IN_PROGRESS",
+      "id": 2
+    },
+    {
+      "title": "done1",
+      "category": "DONE",
+      "id": 3
+    },
+    {
+      "title": "blocked1",
+      "category": "BLOCKED",
+      "id": 4
+    },
+    {
+      "title": "Todo1",
       "category": "TODO",
-      "title": "task_1",
-      "id": 1
+      "id": 5
     },
     {
-      "id": 2,
-      "title": "task2",
-      "category": "IN_PROGRESS"
-    },
-    {
-      "id": 3,
-      "title": "task3",
-      "category": "DONE"
-    },
-    {
-      "id": 4,
-      "title": "task4",
-      "category": "BLOCKED"
-    },
-    {
-      "id": 5,
-      "title": "task5",
-      "category": "TODO"
-    },
-    {
-      "id": 6,
-      "title": "task6",
-      "category": "IN_PROGRESS"
-    },
-    {
-      "id": 7,
-      "title": "task7",
-      "category": "DONE"
-    },
-    {
-      "id": 8,
-      "title": "task8",
-      "category": "BLOCKED"
+      "title": "test2",
+      "category": "IN_PROGRESS",
+      "id": 6
     }
   ]
 }

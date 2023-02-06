@@ -1,34 +1,11 @@
 <!-- mettre des composants * 4  ou cards -->
 <!-- mettre à chacun un tableau filtré -->
-<h1>To do</h1>
-<div *ngFor="let item of toDos">
-  <app-card
-    [title]="item.title"
-    [item]="item"
-    [category]="item.category"
-  ></app-card>
-</div>
-<h1>In progress</h1>
-<div *ngFor="let item of inProgress">
-  <app-card
-    [title]="item.title"
-    [item]="item"
-    [category]="item.category"
-  ></app-card>
-</div>
-<h1>Done</h1>
-<div *ngFor="let item of done">
-  <app-card
-    [title]="item.title"
-    [item]="item"
-    [category]="item.category"
-  ></app-card>
-</div>
-<h1>Blocked</h1>
-<div *ngFor="let item of blocked">
-  <app-card
-    [title]="item.title"
-    [item]="item"
-    [category]="item.category"
-  ></app-card>
-</div>
+<main>
+<app-collum colTitle="To do" [col]='toDos' emptyText="Nothing to do"></app-collum>
+
+<app-collum colTitle="In progress" [col]='inProgress' emptyText="Nothing in progress"></app-collum>
+
+<app-collum colTitle="Done" [col]='done' emptyText="Nothing in done"></app-collum>
+
+<app-collum colTitle="Blocked" [col]='blocked' emptyText="Nothing is blocked"></app-collum>
+</main>

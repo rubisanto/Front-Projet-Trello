@@ -8,6 +8,7 @@ import { PageListTaskComponent } from './pages/page-list-task/page-list-task.com
 import { PageAddTaskComponent } from './pages/page-add-task/page-add-task.component';
 import { PageEditTaskComponent } from './pages/page-edit-task/page-edit-task.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CollumComponent } from './components/collum/collum.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CardComponent,
     PageListTaskComponent,
     PageAddTaskComponent,
-    PageEditTaskComponent
+    PageEditTaskComponent,
+    CollumComponent
   ],
   imports: [
     CommonModule,
