@@ -2,8 +2,10 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  overflow: scroll;
 }
 
 app-collum {
   width: 20vw;
+  min-width: 300px;
 }

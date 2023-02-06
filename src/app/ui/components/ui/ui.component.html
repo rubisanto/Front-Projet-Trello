@@ -1,16 +1,14 @@
-<header class="fixed-top">
-  <ng-content select=".tr-header"></ng-content>
-  <div class="button">
-    <ng-content select=".tr-button"></ng-content>
-  </div>
-  <div class="button">
-    <ng-content select=".tr-home"></ng-content>
-  </div>
-</header>
-<main>
-  <div class="page">
-    <div class="contents">
-      <ng-content select=".tr-router"></ng-content>
+<div class="container">
+  <header class="fixed-top">
+    <div class="button">
+      <ng-content select=".tr-home"></ng-content>
     </div>
-  </div>
-</main>
+    <ng-content select=".tr-header"></ng-content>
+    <div class="button">
+      <ng-content select=".tr-button"></ng-content>
+    </div>
+  </header>
+  <main class="row">
+    <ng-content select=".tr-router"></ng-content>
+  </main>
+</div>

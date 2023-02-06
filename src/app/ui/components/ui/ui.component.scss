@@ -1,6 +1,6 @@
 header {
   height: 65px;
-  background: var(--app-dark);
+  background-color: var(--app-dark);
   color: var(--app-light);
   padding: 15px;
   display: inline-flex;
@@ -11,7 +11,7 @@ header {
 }
 
 main {
-  background: var(--app-darklight);
+  background-color: var(--app-darklight);
   min-height: calc(100vh - 65px);
   padding-top: 65px;
 }
