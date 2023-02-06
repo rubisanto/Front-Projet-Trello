@@ -1,38 +1,34 @@
 {
   "tasks": [
     {
-<<<<<<< HEAD
       "category": "TODO",
-=======
-      "category": "DONE",
->>>>>>> 8f72ad127525353f304643e1efa916da883123e6
-      "id": 1,
-      "title": "task1"
+      "title": "task_1",
+      "id": 1
     },
     {
-      "category": "BLOCKED",
       "id": 2,
-      "title": "task2"
+      "title": "task2",
+      "category": "IN_PROGRESS"
     },
     {
-      "category": "BLOCKED",
       "id": 3,
-      "title": "task3"
+      "title": "task3",
+      "category": "DONE"
     },
     {
-      "category": "TODO",
       "id": 4,
-      "title": "task4"
+      "title": "task4",
+      "category": "BLOCKED"
     },
     {
-      "category": "IN_PROGRESS",
       "id": 5,
-      "title": "task5"
+      "title": "task5",
+      "category": "TODO"
     },
     {
-      "category": "DONE",
       "id": 6,
-      "title": "task6"
+      "title": "task6",
+      "category": "IN_PROGRESS"
     },
     {
       "id": 7,
@@ -43,11 +39,6 @@
       "id": 8,
       "title": "task8",
       "category": "BLOCKED"
-    },
-    {
-      "title": "test1",
-      "category": "TODO",
-      "id": 9
     }
   ]
 }
