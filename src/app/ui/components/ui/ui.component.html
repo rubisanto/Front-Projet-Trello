@@ -1,5 +1,7 @@
-<div class="container">
-  <header class="fixed-top">
+<div class="fluid-container">
+  <header
+    class="d-flex align-items-center justify-content-between bg-dark text-light mb-0 fixed-top"
+  >
     <div class="button">
       <ng-content select=".tr-home"></ng-content>
     </div>
@@ -8,7 +10,7 @@
       <ng-content select=".tr-button"></ng-content>
     </div>
   </header>
-  <main class="row">
+  <main class="px-4" style="margin-top: 100px">
     <ng-content select=".tr-router"></ng-content>
   </main>
 </div>

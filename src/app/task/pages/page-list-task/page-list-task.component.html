@@ -1,11 +1,35 @@
 <!-- mettre des composants * 4  ou cards -->
 <!-- mettre à chacun un tableau filtré -->
-<main class="row">
-<app-collum colTitle="To do" [col]='toDos' emptyText="Nothing to do"></app-collum>
+<main class="d-flex flex-nowrap overflow-auto pt-5" style="margin-top: 60px">
+  <app-collum
+    colTitle="To do"
+    [col]="toDos"
+    emptyText="Nothing to do"
+    class="col-md-3 col-12"
+    style="padding-right: 2rem"
+  ></app-collum>
 
-<app-collum colTitle="In progress" [col]='inProgress' emptyText="Nothing in progress"></app-collum>
+  <app-collum
+    colTitle="In progress"
+    [col]="inProgress"
+    emptyText="Nothing in progress"
+    class="col-md-3 col-12"
+    style="padding-right: 2rem"
+  ></app-collum>
 
-<app-collum colTitle="Done" [col]='done' emptyText="Nothing in done"></app-collum>
+  <app-collum
+    colTitle="Done"
+    [col]="done"
+    emptyText="Nothing in done"
+    class="col-md-3 col-12"
+    style="padding-right: 2rem"
+  ></app-collum>
 
-<app-collum colTitle="Blocked" [col]='blocked' emptyText="Nothing is blocked"></app-collum>
+  <app-collum
+    colTitle="Blocked"
+    [col]="blocked"
+    emptyText="Nothing is blocked"
+    class="col-md-3 col-12"
+    style="padding-right: 2rem"
+  ></app-collum>
 </main>
