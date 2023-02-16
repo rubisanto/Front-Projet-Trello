@@ -1,0 +1,11 @@
+- couleur de fond pour les colonnes
+- choisir une font
+- couleur du header
+- décision sur les boutons => pleins ou outline, hover ou non, icônes
+- dark mode ?
+- revoir le logo m2i qui gène un peu le header
+- en mobile il y a un bout de la colonne de droite qui dépasse
+- magnétisme sur les colonnes
+- à côté du select mettre label
+- modifier une tâche l'envoie en bas de la liste
+- possibilité de tri dans les colonnes

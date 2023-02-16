@@ -1,7 +1,5 @@
 <div class="fluid-container">
-  <header
-    class="d-flex align-items-center justify-content-between bg-dark text-light mb-0 fixed-top"
-  >
+  <header class="d-flex align-items-center justify-content-between bg-dark text-light mb-0 fixed-top px-4">
     <div class="button">
       <ng-content select=".tr-home"></ng-content>
     </div>
@@ -10,7 +8,12 @@
       <ng-content select=".tr-button"></ng-content>
     </div>
   </header>
-  <main class="px-4" style="margin-top: 100px">
-    <ng-content select=".tr-router"></ng-content>
+
+
+  <main class="px-4">
+    <div class="bg-image"
+      style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin-top: 100px; background-image: url(../../../../assets/geometric-3045402_1280.png); height: 100vh; opacity: 0.6; object-fit: cover;">
+    </div>
+    <ng-content select=".tr-router" style="opacity: 1;"></ng-content>
   </main>
 </div>
