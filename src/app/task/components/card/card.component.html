@@ -1,14 +1,20 @@
-<div class="card mb-3" style="max-width: 100vw">
+<div class="card mb-3 shadow" style="max-width: 100vw">
   <div class="card-header">{{ title }}</div>
   <div class="card-body">
     <select (change)="changeState(item, $event)">
-      <option [selected]="state === category" *ngFor="let state of categories" [value]="state">
+      <option
+        [selected]="state === category"
+        *ngFor="let state of categories"
+        [value]="state"
+      >
         {{ state }}
       </option>
     </select>
   </div>
   <div class="card-footer">
-    <button (click)="goToEdit(item)" ngClass="btn btn-outline-primary">Edit</button>
-    <button (click)="delete(item.id)" ngClass="btn btn-danger mx-2">Delete</button>
+    <button (click)="goToEdit(item)" ngClass="btn btn-primary">Edit</button>
+    <button (click)="delete(item.id)" ngClass="btn btn-danger mx-2">
+      Delete
+    </button>
   </div>
 </div>
