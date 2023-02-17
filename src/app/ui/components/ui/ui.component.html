@@ -1,7 +1,5 @@
 <div class="fluid-container">
-  <header
-    class="d-flex align-items-center justify-content-between color-light text-light mb-0 fixed-top px-4"
-  >
+  <header class="d-flex align-items-center justify-content-between color-light text-light mb-0 fixed-top px-4">
     <div class="button">
       <ng-content select=".tr-home"></ng-content>
     </div>
@@ -11,10 +9,8 @@
     </div>
   </header>
 
-  <main class="px-4">
-    <div
-      class="bg-image"
-      style="
+  <main class="container px-4" style="height: calc(100vh - 100px);margin-top: 100px;">
+    <div class="bg-image" style="
         position: absolute;
         top: 0;
         left: 0;
@@ -25,12 +21,9 @@
         /* background-size: contain; */
         background-image: linear-gradient(to bottom, #f443368d, #fffb073c);
         opacity: 0.4;
-        height: 100vh;
-        height: calc(100vh - 100px);
         z-index: -2;
         /* object-fit: cover; */
-      "
-    ></div>
+      "></div>
 
     <ng-content select=".tr-router"></ng-content>
   </main>
