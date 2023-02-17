@@ -9,6 +9,7 @@ import { PageAddTaskComponent } from './pages/page-add-task/page-add-task.compon
 import { PageEditTaskComponent } from './pages/page-edit-task/page-edit-task.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CollumComponent } from './components/collum/collum.component';
+import { IconsModule } from '../icons/icons.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CollumComponent } from './components/collum/collum.component';
   imports: [
     CommonModule,
     TaskRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    IconsModule
   ]
 })
 export class TaskModule { }

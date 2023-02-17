@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { UiModule } from '../ui/ui.module';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { IconsModule } from '../icons/icons.module';
 
 
 
@@ -19,6 +20,7 @@ import { RouterModule } from '@angular/router';
   exports: [
     HeaderComponent,
     UiModule,
+    IconsModule
   ]
 })
 export class CoreModule { }

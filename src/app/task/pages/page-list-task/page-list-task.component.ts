@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { StateTask } from 'src/app/core/enums/state-task';
 import { Task } from 'src/app/core/models/task';
 import { TaskService } from '../../services/task.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-list-task',
@@ -16,7 +17,7 @@ export class PageListTaskComponent implements OnInit {
   public inProgress!: Task[];
   public blocked!: Task[];
 
-  constructor(private taskService: TaskService) {
+  constructor(private taskService: TaskService, private router: Router) {
     this.taskService.collection.subscribe((datas) => {
       this.collection = datas;
       this.toDos = this.collection.filter((item) => item.category === 'TODO');
@@ -36,5 +37,9 @@ export class PageListTaskComponent implements OnInit {
   // });
 
   ngOnInit(): void {}
+
+  public goToAdd() {
+    this.router.navigate(['add']);
+  }
 
 }
