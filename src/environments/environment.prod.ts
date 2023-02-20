@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  urlApi: 'back-projet-trello-production.up.railway.app'
 };
