@@ -20,13 +20,13 @@ export class PageListTaskComponent implements OnInit {
   constructor(private taskService: TaskService, private router: Router) {
     this.taskService.collection.subscribe((datas) => {
       this.collection = datas;
-      this.toDos = this.collection.filter((item) => item.category === 'TODO');
+      this.toDos = this.collection.filter((item) => item.category === 'To do');
       this.inProgress = this.collection.filter(
-        (item) => item.category === 'IN_PROGRESS'
+        (item) => item.category === 'In progress'
       );
-      this.done = this.collection.filter((item) => item.category === 'DONE');
+      this.done = this.collection.filter((item) => item.category === 'Done');
       this.blocked = this.collection.filter(
-        (item) => item.category === 'BLOCKED'
+        (item) => item.category === 'Blocked'
       );
       console.log('toDos', this.toDos);
     });
@@ -36,7 +36,7 @@ export class PageListTaskComponent implements OnInit {
   //  return item.category === 'TODO';
   // });
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   public goToAdd() {
     this.router.navigate(['add']);
