@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlApi: 'http://localhost:3000'
+  urlApi: 'back-projet-trello-production.up.railway.app'
 };
 
 /*
