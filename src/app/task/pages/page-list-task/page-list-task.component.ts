@@ -20,9 +20,9 @@ export class PageListTaskComponent implements OnInit {
   constructor(private taskService: TaskService, private router: Router) {
     this.taskService.collection.subscribe((datas) => {
       this.collection = datas;
-      this.toDos = this.collection.filter((item) => item.category === 'To Do');
+      this.toDos = this.collection.filter((item) => item.category === 'To do');
       this.inProgress = this.collection.filter(
-        (item) => item.category === 'In Progress'
+        (item) => item.category === 'In progress'
       );
       this.done = this.collection.filter((item) => item.category === 'Done');
       this.blocked = this.collection.filter(

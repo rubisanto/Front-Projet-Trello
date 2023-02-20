@@ -1,6 +1,6 @@
 export enum StateTask {
-  TODO = 'To Do',
-  IN_PROGRESS = 'In Progress',
+  TODO = 'To do',
+  IN_PROGRESS = 'In progress',
   DONE = 'Done',
   BLOCKED = 'Blocked'
 }
