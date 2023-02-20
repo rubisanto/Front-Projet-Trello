@@ -1,0 +1,11 @@
+.card-body {
+    display: flex;
+    flex-direction: inline;
+    justify-content: space-between;
+}
+
+.card-icons {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}

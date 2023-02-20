@@ -2,17 +2,13 @@
   <div class="card-header">{{ title }}</div>
   <div class="card-body">
     <select (change)="changeState(item, $event)">
-      <option
-        [selected]="state === category"
-        *ngFor="let state of categories"
-        [value]="state"
-      >
+      <option [selected]="state === category" *ngFor="let state of categories" [value]="state">
         {{ state }}
       </option>
     </select>
-  </div>
-  <div class="card-footer">
-    <app-icon-edit (click)="goToEdit(item)"></app-icon-edit>
-    <app-icon-delete (click)='delete(item.id)'></app-icon-delete>
+    <div class="card-icons">
+      <app-icon-edit (click)="goToEdit(item)"></app-icon-edit>
+      <app-icon-delete (click)='delete(item.id)'></app-icon-delete>
+    </div>
   </div>
 </div>
