@@ -1,11 +1,11 @@
 <div class="fluid-container">
-  <header class="d-flex align-items-center justify-content-between color-light mb-0 fixed-top px-4">
+  <header class="header">
     <ng-content select=".tr-header"></ng-content>
   </header>
 
-  <main class="container px-4" style="height: calc(100vh - 100px);margin-top: 100px;">
+  <main class="container px-4" style="margin-top: 100px;">
     <div class="bg-image" style="
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
@@ -21,4 +21,7 @@
 
     <ng-content select=".tr-router"></ng-content>
   </main>
+  <footer>
+    <app-icon-add (click)='goToAdd()'></app-icon-add>
+  </footer>
 </div>
