@@ -1,0 +1,14 @@
+.card-body {
+    display: flex;
+    flex-direction: inline;
+    justify-content: space-between;
+    background-color: rgb(225, 225, 225);
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+.card-icons {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
