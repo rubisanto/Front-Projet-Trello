@@ -3,8 +3,10 @@
     <ng-content select=".tr-header"></ng-content>
   </header>
 
-  <main class="container px-4" style="margin-top: 100px;">
-    <div class="bg-image" style="
+  <main class="container px-4" style="margin-top: 100px">
+    <div
+      class="bg-image"
+      style="
         position: fixed;
         top: 0;
         left: 0;
@@ -17,11 +19,12 @@
         opacity: 0.4;
         z-index: -2;
         /* object-fit: cover; */
-      "></div>
+      "
+    ></div>
 
     <ng-content select=".tr-router"></ng-content>
   </main>
   <footer>
-    <app-icon-add (click)='goToAdd()'></app-icon-add>
+    <app-icon-add class="cursor-pointer" (click)="goToAdd()"></app-icon-add>
   </footer>
 </div>
