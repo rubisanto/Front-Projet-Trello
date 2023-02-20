@@ -38,8 +38,6 @@ export class PageListTaskComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  public goToAdd() {
-    this.router.navigate(['add']);
-  }
+
 
 }

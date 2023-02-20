@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ui',
@@ -6,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ui.component.scss'],
 })
 export class UiComponent implements OnInit {
-  constructor() {}
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
     console.log('window', window.screen.height);
+  }
+
+  public goToAdd() {
+    this.router.navigate(['add']);
   }
 }

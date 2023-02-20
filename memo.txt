@@ -11,10 +11,10 @@
 - possibilité de tri dans les colonnes
 - code couleur 
 - titres colonnes en cap + police
-formulaire de recherche
-filtre par type et par statut
-unifier le site en anglais
-bouton ajouter en icône + flottant en bas à droite
+- formulaire de recherche
+- filtre par type et par statut
+- unifier le site en anglais
+- bouton ajouter en icône + flottant en bas à droite
 remplacer le bouton home par le logo et le placer à gauche
 enlver les maj et _ des select
 choisir une font
@@ -22,5 +22,6 @@ régler le problème du header qui cache le form edit
 ajouter un toast pour le succès d'une création
 modal de confirmation pour le delete
 bouger edit et add à droite sur la même ligne que le select
+
 services hébergement: https://railway.app/
 https://vercel.com/#get-started
