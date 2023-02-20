@@ -1,4 +1,9 @@
-<app-form label="Modifier" [obj]="item" (submited)="onEdit($event)" *ngIf="item"></app-form>
-<div *ngIf='!item' class="spinner-border" role="status">
+<app-form
+  label="Modify"
+  [obj]="item"
+  (submited)="onEdit($event)"
+  *ngIf="item"
+></app-form>
+<div *ngIf="!item" class="spinner-border" role="status">
   <span class="sr-only"></span>
 </div>
